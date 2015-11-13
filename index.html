@@ -79,7 +79,7 @@
 							<span class="image fit"><img src="images/tank1.jpg" alt="" /></span>
 						</div>
 					</div>
-					<a href="#gameinfo" class="button scrolly">Game Rules</a>
+					<a href="#gameinfo" class="button scrolly">Game Information</a>
 				</div>
 			</section>
 
@@ -104,22 +104,47 @@
 							<p>The <strong>main objective</strong> of this game is to play as a tank to accumulate points while taking care of its own survival</p>
 							<p>
 								There are three types of blocks available in the gaming environment
+								<ul>
+									<li>
+										Brick Wall - A hit will convert the wall into a blank cell
+									</li>
+									<li>
+										Stone Wall - Cannot be destroyed
+									</li>
+									<li>
+										Water - Sudden death if player moves to this cell
+									</li>
+									<li>
+										Blank cell - Player is free to move in these.
+									</li>
+								</ul>
+							</p>
+							<p>
+								There are two ways a player can acquire points in the game
 							<ul>
 								<li>
-									Brick Wall - A hit will convert the wall into a blank cell
+									Breaking Bricks - When a player hits a shot to a brick a constant amount of points will be added to the player
 								</li>
 								<li>
-									Stone Wall - Cannot be destroyed
+									Collecting coins - There are two types of coins that are there in the game.
+									<ul>
+										<li>
+											Random treasures - Can collect tem by moving to the cell when the appear
+										</li>
+										<li>
+											Spoils of war - When a player destroyes another tank, 25%t of the destroyed players coin pile will be added to the player.
+										</li>
+									</ul>
 								</li>
-								<li>
-									Water - Sudden death if player moves to this cell
-								</li>
-								<li>
-									Blank cell - Player is free to move in these.
-								</li>
+
 							</ul>
-								There are coins and life packs which will appear randomly that will give the player more points and health separately.
-								Furthermore a percentage of the victim will be added to the destroyer  when a tank is destroyed.
+							</p>
+							<p>
+								Life Packs will appear randomly as coin piles in te grid.
+								The method to take a life pack is similar to a coin pile.
+								A life pack will increase the health by 20% of the initial health.
+								It is possible for a player to have more health than what he had in the start.
+
 							</p>
 
 							<header class="major">
@@ -139,7 +164,13 @@
 										If hit an obstacle or being shot at, the health of the tank will be reduced
 									</li>
 									<li>
-										The game is ended when all tanks are destroyed, when the time limit of the game is reached or all the coin piles are disappered from the game.
+										A bullet hit will reduce the player's health by 10%. A kill will drop a coin pile on the grid. Collection of that pile is similar to a random pile
+									</li>
+									<li>
+										If a player hit a brick, a fixed number of points will be deduced from the player.
+									</li>
+									<li>
+										The game is ended when all tanks are destroyed, when the time limit of the game is reached or all the coin piles are disappeared from the game.
 									</li>
 								</ul>
 							</header>
@@ -155,42 +186,65 @@
 			</section>
 
 		<!-- Three -->
-			<section id="client" class="main style1 special">
-				<div class="container">
-					<header class="major">
-						<h2>Game Client Details</h2>
-					</header>
-					<p>Ante nunc accumsan et aclacus nascetur ac ante amet sapien sed.</p>
-					<div class="row 150%">
-						<div class="4u 12u$(medium)">
-							<span class="image fit"><img src="images/pic02.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
+		<section id="client" class="main style1">
+			<div class="container">
+				<div class="row 150%">
+					<div >
+						<header class="major">
+
+							<h2>Game Client Details<br />
+							</h2>
+						</header>
+
+						<span class="image fit" style="float: right; width: 50%;"><img src="images/tanksTech.jpg" alt="" /></span>
+
+								We are given the server side of the game and we are developing the Client side of the game.
+							<ul>
+								<li>
+									<Strong>Technologies we used:</Strong>
+								</li>
+								<ul>
+									<li>
+										C# Language - To develop the Client side of the game
+									</li>
+									<li>
+										XNA Gaming Studio - To develop the Client graphical User Interface of the game
+									</li>
+
+								</ul>
 							</ul>
-						</div>
-						<div class="4u 12u$(medium)">
-							<span class="image fit"><img src="images/pic03.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
+
+
+							<ul>
+								<li>
+									<Strong>Thechniques we used:</Strong>
+								</li>
+								<ul>
+									<li>
+										Minimax Algorithm - To develop the searching of the AI and to predefine the next move
+									</li>
+									<li>
+										Game Protocol - The way sever communicates with the client. Here the server sends different Character Strings to communicate with the Client.
+										<ul>
+											<li>
+												Example :- <strong>S:P{num}:{player location  x},{player location  y}:{Direction}#</strong> - This message is sent when the server accepts the request to join.
+											</li>
+
+										</ul>
+									</li>
+
+								</ul>
 							</ul>
-						</div>
-						<div class="4u$ 12u$(medium)">
-							<span class="image fit"><img src="images/pic04.jpg" alt="" /></span>
-							<h3>Magna feugiat lorem</h3>
-							<p>Adipiscing a commodo ante nunc magna lorem et interdum mi ante nunc lobortis non amet vis sed volutpat et nascetur.</p>
-							<ul class="actions">
-								<li><a href="#" class="button">More</a></li>
-							</ul>
-							<a href="#aboutus" class="button scrolly">About us</a>
-						</div>
+
+						<p>
+
+						</p>
 
 					</div>
 				</div>
-			</section>
+				<a href="#aboutus" class="button scrolly">About us</a>
+			</div>
+		</section>
 
 		<!-- Four -->
 			<section id="aboutus" class="main style2 special">
